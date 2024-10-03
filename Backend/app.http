@@ -1,0 +1,9 @@
+GET http://localhost:4000/api/books
+
+
+###
+GET http://localhost:4000/api/books/2
+
+
+###
+DELETE http://localhost:4000/api/books/5
