@@ -1,18 +1,27 @@
 import React from 'react';
-import BookCard from '../BookCard/BookCard'; // Adjust this import according to your folder structure
+import './MyLibrary.css'; // Ensure to import the CSS file
 
-const BookList = ({ books, onBookClick }) => {
+const MyLibrary = ({ books, onRemove }) => {
   return (
-    <div className="book-list">
+    <div className="my-library">
+      <h2>My Library</h2>
       {books.length === 0 ? (
-        <p>No books found in your library.</p>
+        <p>No books in your library.</p>
       ) : (
-        books.map(book => (
-          <BookCard key={book.id} book={book} onClick={() => onBookClick(book)} />
-        ))
+        <div className="book-cards">
+          {books.map((book) => (
+            <div key={book.id} className="book-card">
+              <h3 className="book-title">{book.title}</h3>
+              <p className="book-author">{book.author}</p>
+              <button onClick={() => onRemove(book)} className="remove-button">
+                Remove
+              </button>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );
 };
 
-export default BookList;
+export default MyLibrary;

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import BookCard from '../components/BookCard/BookCard'; // Adjust the path as necessary
 import Navbar from '../components/Navbar/Navbar'; // Import the Navbar
 import SearchBar from '../components/SearchBar/SearchBar'; // Adjust the path as necessary
@@ -8,7 +7,7 @@ import './Homepage.css'; // Import your CSS
 const HomePage = () => {
     const [books, setBooks] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    const navigate = useNavigate(); // Initialize navigate for navigation
+    //const navigate = useNavigate(); // Initialize navigate for navigation
 
     // Fetch books data from API
     useEffect(() => {

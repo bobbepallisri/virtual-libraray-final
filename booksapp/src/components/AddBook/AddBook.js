@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import './AddBook.css';
+import './AddBook.css'; // Import the CSS file
 
 const AddBook = () => {
   const [newBook, setNewBook] = useState({
@@ -25,12 +25,12 @@ const AddBook = () => {
 
   return (
     <form onSubmit={handleSubmit} className="add-book-form">
-      <input type="text" name="title" placeholder="Title" value={newBook.title} onChange={handleChange} />
-      <input type="text" name="author" placeholder="Author" value={newBook.author} onChange={handleChange} />
-      <input type="text" name="genre" placeholder="Genre" value={newBook.genre} onChange={handleChange} />
-      <input type="text" name="rating" placeholder="Rating" value={newBook.rating} onChange={handleChange} />
-      <input type="text" name="description" placeholder="Description" value={newBook.description} onChange={handleChange} />
-      <input type="text" name="publication_year" placeholder="Publication Year" value={newBook.publication_year} onChange={handleChange} />
+      <input type="text" name="title" placeholder="Title" value={newBook.title} onChange={handleChange} required />
+      <input type="text" name="author" placeholder="Author" value={newBook.author} onChange={handleChange} required />
+      <input type="text" name="genre" placeholder="Genre" value={newBook.genre} onChange={handleChange} required />
+      <input type="text" name="rating" placeholder="Rating" value={newBook.rating} onChange={handleChange} required />
+      <input type="text" name="description" placeholder="Description" value={newBook.description} onChange={handleChange} required />
+      <input type="text" name="publication_year" placeholder="Publication Year" value={newBook.publication_year} onChange={handleChange} required />
       <button type="submit">Add Book</button>
     </form>
   );
