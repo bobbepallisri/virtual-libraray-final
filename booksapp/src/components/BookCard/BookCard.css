@@ -1,0 +1,12 @@
+.book-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .book-card:hover {
+    background-color: #f9f9f9;
+  }
+  
